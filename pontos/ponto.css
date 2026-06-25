@@ -1,0 +1,128 @@
+/* ===================================================
+   PÁGINA DE PONTO TURÍSTICO — estilos específicos
+   =================================================== */
+
+.ponto-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+}
+
+.ponto-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(46,23,54,0.25) 0%, rgba(46,23,54,0.95) 100%);
+}
+
+.ponto-hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 0 clamp(1.5rem, 6vw, 5rem) 3rem;
+  width: 100%;
+}
+
+.back-link {
+  position: fixed;
+  top: 1.5rem;
+  left: clamp(1.5rem, 5vw, 4rem);
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 100px;
+  background: rgba(245, 239, 224, 0.12);
+  backdrop-filter: blur(6px);
+  color: var(--creme);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background 0.25s;
+}
+
+.back-link:hover { background: var(--lima); color: var(--acai-deep); }
+
+.ponto-hero__content .tag {
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--lima-soft);
+  font-weight: 600;
+}
+
+.ponto-hero__content h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  color: var(--creme);
+  margin-top: 0.5rem;
+  max-width: 18ch;
+}
+
+.ponto-body {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 5rem) clamp(1.5rem, 6vw, 0);
+}
+
+.ponto-body p {
+  color: var(--creme-dim);
+  font-size: 1.05rem;
+  margin-bottom: 1.4rem;
+}
+
+.ponto-body .lead {
+  font-size: 1.2rem;
+  color: var(--creme);
+}
+
+.ponto-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgba(245, 239, 224, 0.04);
+  border: 1px solid rgba(245, 239, 224, 0.1);
+}
+
+.ponto-meta__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.ponto-meta__item .label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--lima);
+  font-weight: 600;
+}
+
+.ponto-meta__item .value {
+  font-size: 0.95rem;
+  color: var(--creme);
+}
+
+.ponto-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem clamp(1.5rem, 6vw, 0) 4rem;
+  border-top: 1px solid rgba(245, 239, 224, 0.1);
+  margin-top: 2rem;
+}
+
+.ponto-nav a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--lima);
+}
+
+.ponto-nav a:hover { color: var(--lima-soft); }
